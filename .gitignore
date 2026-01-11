@@ -1,0 +1,33 @@
+### --- Python (Lambda & Pulumi) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+myvenv/
+ENV/
+env/
+.env
+pip-log.txt
+pip-delete-this-directory.txt
+.python-version
+
+### --- AWS & Credentials ---
+.aws/
+credentials
+*.pem
+*.pub
+
+### --- OS & Editors ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+### --- Build Artifacts ---
+# For when you zip your Lambda code manually
+dist/
+build/
+*.zip
+node_modules/
