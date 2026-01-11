@@ -12,10 +12,13 @@ def handler(event, context):
         return
 
     try:
+        metrics = PrometheusClient()
         scaler = SmartScaler()
-        # Mocking metrics call for this example
-        cpu = 85.0
-        pending = 0
+
+        cpu = metrics.get_avg_cpu()
+        pending = metrics.get_pending_pods()
+
+        print(f"Metrics - CPU: {cpu}%, Pending Pods: {pending}")
 
         new_cap = scaler.make_decision(cpu, pending)
         if new_cap != scaler.get_current_capacity():
