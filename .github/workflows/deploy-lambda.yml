@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt -t
+          pip install -r requirements.txt -t ./src
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
